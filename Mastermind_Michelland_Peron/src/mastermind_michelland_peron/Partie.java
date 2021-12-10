@@ -10,6 +10,6 @@ package mastermind_michelland_peron;
  */
 public class Partie {
     Grille grillejeu;
-    Boules [];
+    Boules []Listeboules;
     
 }
