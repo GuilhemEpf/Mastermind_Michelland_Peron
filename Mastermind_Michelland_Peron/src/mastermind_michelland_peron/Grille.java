@@ -41,8 +41,7 @@ public int [] indice(Boules []Combinaison,Boules []CombinaisonGagnante){
     int bienplacé=0;
     int malplacé=0;
     int [] indice = new int[2];
-    indice[0]=bienplacé;
-    indice[1]=bienplacé;
+    
     for (int i=0;i<4;i++){
         if (Combinaison[i]==CombinaisonGagnante[i]){
            bienplacé+=1;
@@ -50,9 +49,13 @@ public int [] indice(Boules []Combinaison,Boules []CombinaisonGagnante){
         else{
             bienplacé+=1;
         }
-        return indice[bienplacé,malplacé];
-        
+       
     }
+    malplacé=4-bienplacé;
+    indice[0]=bienplacé;
+    indice[1]=malplacé;        
+    return indice;
+
 }
 
 
