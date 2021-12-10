@@ -11,5 +11,25 @@ package mastermind_michelland_peron;
 public class Partie {
     Grille grillejeu;
     Boules []Listeboules;
+    int essaierestant=12;
+    String nom;
+
+
+public void DebuterPartie(){
+    while (Grille.Succes(Boules []Combinaison, Boules []CombinaisonGagnante)==false && essaierestant!=0){
+        if (Grille.affecterCombinaison()==true){
+            
+        }
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
