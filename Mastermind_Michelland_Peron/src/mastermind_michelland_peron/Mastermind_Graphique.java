@@ -58,12 +58,16 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
         btn_start3 = new javax.swing.JButton();
         jLabel_NbEssaisRest8 = new javax.swing.JLabel();
         NbEssaisRest = new javax.swing.JTextField();
-        stat_partie = new javax.swing.JPanel();
-        jLabel_NbEssaisRest = new javax.swing.JLabel();
-        jLabel_NbEssaisRest9 = new javax.swing.JLabel();
-        mal_place = new javax.swing.JTextField();
-        bien_place = new javax.swing.JTextField();
+        jPanel_grille = new javax.swing.JPanel();
+        jComboBox_1_1 = new javax.swing.JComboBox<>();
+        jComboBox_1_2 = new javax.swing.JComboBox<>();
+        jComboBox_1_3 = new javax.swing.JComboBox<>();
+        jComboBox_1_4 = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
+        jButton_annuler = new javax.swing.JButton();
+        jButton_valider = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         panneau_creation_partie4.setBackground(new java.awt.Color(255, 255, 153));
         panneau_creation_partie4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -200,39 +204,73 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
         panneau_creation_partie.add(jLabel_NbEssaisRest8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
         panneau_creation_partie.add(NbEssaisRest, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 60, -1));
 
-        stat_partie.setBackground(new java.awt.Color(0, 51, 51));
-        stat_partie.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel_grille.setBackground(new java.awt.Color(177, 94, 18));
+        jPanel_grille.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel_NbEssaisRest.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_NbEssaisRest.setText("Pions mal placés :");
-        stat_partie.add(jLabel_NbEssaisRest, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jComboBox_1_1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bleu", "Blanc", "Rouge", "Jaune", "Orange", "Rose", "Vert", " " }));
+        jPanel_grille.add(jComboBox_1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
 
-        jLabel_NbEssaisRest9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_NbEssaisRest9.setText("Pions bien placés :");
-        stat_partie.add(jLabel_NbEssaisRest9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-        stat_partie.add(mal_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 60, -1));
+        jComboBox_1_2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bleu", "Blanc", "Rouge", "Jaune", "Orange", "Rose", "Vert" }));
+        jPanel_grille.add(jComboBox_1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
 
-        bien_place.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bien_placeActionPerformed(evt);
-            }
-        });
-        stat_partie.add(bien_place, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 60, -1));
+        jComboBox_1_3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bleu", "Blanc", "Rouge", "Jaune", "Orange", "Rose", "Vert" }));
+        jPanel_grille.add(jComboBox_1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(177, 94, 18));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jComboBox_1_4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bleu", "Blanc", "Rouge", "Jaune", "Orange", "Rose", "Vert" }));
+        jPanel_grille.add(jComboBox_1_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(189, 9, 9));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_annuler.setText("Annuler");
+        jPanel1.add(jButton_annuler, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+
+        jButton_valider.setText("Valider");
+        jPanel1.add(jButton_valider, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 13, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 15, Short.MAX_VALUE)
+        );
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 13, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 15, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jPanel_grille, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(stat_partie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panneau_creation_partie, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panneau_creation_partie, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -240,12 +278,14 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel_grille, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(panneau_creation_partie, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(stat_partie, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(319, Short.MAX_VALUE))))
+                        .addGap(27, 27, 27)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,10 +322,6 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
     private void btn_start7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_start7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_start7ActionPerformed
-
-    private void bien_placeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bien_placeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bien_placeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,7 +367,6 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
     private javax.swing.JTextField NbEssaisRest5;
     private javax.swing.JTextField NbEssaisRest6;
     private javax.swing.JTextField NbEssaisRest7;
-    private javax.swing.JTextField bien_place;
     private javax.swing.JButton btn_start;
     private javax.swing.JButton btn_start1;
     private javax.swing.JButton btn_start2;
@@ -340,7 +375,12 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
     private javax.swing.JButton btn_start5;
     private javax.swing.JButton btn_start6;
     private javax.swing.JButton btn_start7;
-    private javax.swing.JLabel jLabel_NbEssaisRest;
+    private javax.swing.JButton jButton_annuler;
+    private javax.swing.JButton jButton_valider;
+    private javax.swing.JComboBox<String> jComboBox_1_1;
+    private javax.swing.JComboBox<String> jComboBox_1_2;
+    private javax.swing.JComboBox<String> jComboBox_1_3;
+    private javax.swing.JComboBox<String> jComboBox_1_4;
     private javax.swing.JLabel jLabel_NbEssaisRest1;
     private javax.swing.JLabel jLabel_NbEssaisRest2;
     private javax.swing.JLabel jLabel_NbEssaisRest3;
@@ -349,9 +389,10 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_NbEssaisRest6;
     private javax.swing.JLabel jLabel_NbEssaisRest7;
     private javax.swing.JLabel jLabel_NbEssaisRest8;
-    private javax.swing.JLabel jLabel_NbEssaisRest9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField mal_place;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel_grille;
     private javax.swing.JPanel panneau_creation_partie;
     private javax.swing.JPanel panneau_creation_partie1;
     private javax.swing.JPanel panneau_creation_partie2;
@@ -360,6 +401,5 @@ public class Mastermind_Graphique extends javax.swing.JFrame {
     private javax.swing.JPanel panneau_creation_partie5;
     private javax.swing.JPanel panneau_creation_partie6;
     private javax.swing.JPanel panneau_creation_partie7;
-    private javax.swing.JPanel stat_partie;
     // End of variables declaration//GEN-END:variables
 }
